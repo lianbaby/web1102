@@ -49,7 +49,10 @@
                     if(parseInt(result)===1){  //檢查帳號是否重覆
                         alert("帳號重覆");
                     }else{  //新增帳號
-                        alert("註冊完成，歡迎加入");
+                        $.post("./api/reg.php",user,()=>{  //ajax
+                            alert("註冊完成，歡迎加入");
+                            reset(); //按下alert確定後，清除已填資料
+                        })
                     }
                     
 
