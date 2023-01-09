@@ -31,7 +31,8 @@
             acc:$("#acc").val(),
             pw:$("#pw").val()
         }
-        .post("./api/chk_acc.php",user,(result)=>{ //.post傳送資料        
+        $.post("./api/chk_acc.php",user,(result)=>{ //.post傳送資料   
+            console.log(result);
             if(parseInt(result)===1){ //拿到的result解析成數字
                 //有此帳號
                 $.post("./api/chk_pw.php",user,(result)=>{
@@ -45,11 +46,13 @@
                     }else{
                         //密碼錯誤
                         alert("密碼錯誤");
+                        reset();
                     }
                 })
             }else{
                 //無此帳號
                 alert("查無帳號");
+                reset();
             }
         })
     }
