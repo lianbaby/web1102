@@ -17,7 +17,8 @@ foreach($rows as $row){
 ?>    
     <tr>
         <td><?=$row['acc'];?></td>
-        <td><?=$row['pw'];?></td>
+        <!-- 用星星顯示原本的密碼 -->
+        <td><?=str_repeat("*",strlen($row['pw']));?></td> 
         <td><input type="checkbox" name="del[]" value="<?=$row['id'];?>"></td>
     </tr>
 <?php
