@@ -46,7 +46,7 @@
                  <div class="short"><?=mb_substr($row['text'],0,20);?>...</div>
                  <div class="full">
                     <?php
-                    echo "<div style='color:skyblue'>".$row['type']."</div>";
+                    echo "<h3 style='color:skyblue'>".$News->type[$row['type']]."</h3>";//運用到base檔裡的陣列去秀public
                     echo "<div>".nl2br($row['text'])."</div>";
                     ?>
                 </div> 
