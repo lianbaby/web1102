@@ -22,7 +22,7 @@ $(document).ready(()=>{
 				$(this).siblings('.num').text(num-1)
 			}
 
-			//location.reload(); //重新整理頁面
+			location.reload(); //重新整理頁面
 		})
 		
 	})
